@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "./src/build")));
 
 app.get("/", (req, res) => {
     // run your query here
-    res.send("hello from the server!");
+    res.send("hello from FEC");
 });
 
 app.listen(port, () => {
