@@ -1,10 +1,10 @@
-# BOILER PLATE
+# FEC Worst Buy Product Display
 
 ## Using this Repository
 
 -- npm install
--- npm run dev will build a dist folder and watch for changes made
--- npm start will launch a react hot server that will refresh on changes.
+-- npm run start will build a dist folder and watch for changes made
+-- npm run start:server will launch a react hot server that will refresh on changes.
 
 ## Getting a Copy of the Repo
 
