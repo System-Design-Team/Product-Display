@@ -32,6 +32,23 @@ AWS.config.update({
 //Creating a new instance of S3:
 const s3 = new AWS.S3();
 
+//GET method route for downloading/retrieving file URL
+app.get('/get_fileUrl/:file_name',(req,res)=>{
+    getFileUrl(req.params.file_name, res);
+});
+
+  //getFileUrl function
+function getFileUrl(filename,res){
+    const urlParams = {Bucket: 'sample-bucket-name', Key: filename};
+    s3.getSignedUrl('getObject', urlParams, function(err, url){
+    if(err){
+        return res.status(400).send({success:false ,'err':err});
+    }
+    else{
+        return res.status(200).send({success:true ,'url':url});
+    }
+    });
+}
 
 //GET method route for downloading/retrieving file
 app.get('/get_file/:file_name',(req,res)=>{
