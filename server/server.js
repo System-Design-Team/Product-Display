@@ -5,7 +5,6 @@ const keys = require('./keys.js');
 const AWS = require('aws-sdk');
 const fs = require('fs');
 const queries = require('./database/queries');
-const db = require('./database/mysqlconfig');
 const app = express();
 const cors = require('cors');
 
