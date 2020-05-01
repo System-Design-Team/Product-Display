@@ -16,10 +16,10 @@ app.get("/", (req, res) => {
     // run your query here
     res.send("hello from FEC");
 });
+
 app.get("/view", (req, res) => {
     // run your query here
     let sku = req.query.sku;
-
     queries.getProduct(sku, (err, data) => {
         if (err) {
             console.log('error getting product', err);

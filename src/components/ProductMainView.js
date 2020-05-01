@@ -3,9 +3,9 @@ import React from 'react';
 
 
 const ProductMainView = ({details}) => (
-        <div>
-            <h2 className="test">{details.brand}</h2>
-            <p>{details["review_rating"]}</p>
+        <div id="title-outer">
+            <h2 id="title">{details.brand}</h2>
+            <p id="rating">{details["review_rating"]}</p>
 
         </div>
 
