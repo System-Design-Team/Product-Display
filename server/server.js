@@ -7,13 +7,27 @@ const fs = require('fs');
 const queries = require('./database/queries');
 const db = require('./database/mysqlconfig');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, "./src/build")));
 
 app.get("/", (req, res) => {
     // run your query here
     res.send("hello from FEC");
+});
+app.get("/view", (req, res) => {
+    // run your query here
+    let sku = req.query.sku;
+
+    queries.getProduct(sku, (err, data) => {
+        if (err) {
+            console.log('error getting product', err);
+            res.status(500).send(err);
+        }
+        res.send(data);
+    })
 });
 
 app.listen(port, () => {
