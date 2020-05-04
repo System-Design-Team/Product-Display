@@ -2,7 +2,11 @@ import React from 'react';
 
 const Category = ({catDetails}) => (
         <div id="category">
-                <h2>{catDetails}</h2>
+                <ul>
+                <li>Worst items </li>
+                <li id="arrow"> ▶ </li>
+                <li> {catDetails}</li>
+                </ul>
         </div>
 );
 export default Category;

@@ -6,12 +6,12 @@ import Sku from './Sku.js';
 import Images from './Images.js';
 
 const ProductMainView = ({details}) => (
-        <div id="title-outer">
+        <div id="view-outer">
             <Category catDetails={details.category}/>
             <BrandTitle titleDetails={details["product_title"]} brand={details.brand} />
-            <Ratings rating={details["review_rating"]} reviewCount={details["review_count"]} />
             <Sku number={details.sku}/>
-            <Images link={details["product_images"]} />
+            <Ratings rating={details["review_rating"]} reviewCount={details["review_count"]} />
+            <Images links={details["product_images"]} />
         </div>
 
 );

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Images = ({link}) => (
+const Images = ({links}) => (
         <div id="images">
-                <h2>{link}</h2>
+                <img id="main-image" src={links}/>
         </div>
 );
 export default Images;
