@@ -41,7 +41,7 @@ export default class App extends Component {
   }
 
   render() {
-
+    
     return (
       <div>
         {this.state.doneFetching ? <ProductMainView details={this.state.productInfo}/> : 'Fetching product'}
