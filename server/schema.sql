@@ -20,7 +20,7 @@ INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125614,'Trash Cannon','Replacement Battery',3,321,NULL,'photography hardware');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125615,'Trash Cannon','Camera Tri Pod',4.8,125,NULL,'photography hardware');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125616,'Trash Cannon','Studio Lighting',2.1,4000,NULL,'photography hardware');
-INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125617,'Feco Gear','Extra Large Camera Backpack',2.5,527,NULL,'photography hardware');
+INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125617,'Feco Gear','Extra Large Camera Backpack',2.5,527,"https://cdn.shopify.com/s/files/1/0079/1835/4496/products/camera_backpack_2_800x.jpg?v=1587433060",'photography hardware');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125618,'UnderWearor','Small Camera Backpack',3.6,761,NULL,'photography hardware');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125619,'Feco Gear','Camera Backpack',4.7,687,NULL,'photography hardware');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (125620,'Trash Cannon','IXY D5 Waterproof',3.9,5216,NULL,'photography hardware');
