@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProductMainView from './ProductMainView.js';
-import '../styles/main.css';
 
 let axios = require('axios');
 
