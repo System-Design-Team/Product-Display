@@ -11,7 +11,7 @@ class RatingStar extends React.Component {
         render() {
         return(
             <div>
-                <StarRating starRatedColor="#FFE000" name="product-star-rating" starDimension="13px" starSpacing="1px" numberofStars={5} rating={this.state.rating} />
+                <StarRating starRatedColor="#FFE000" name="product-star-rating" starDimension="15px" starSpacing="1px" numberofStars={5} rating={this.state.rating} />
             </div>
         )
     }

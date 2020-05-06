@@ -7,6 +7,7 @@ const Ratings = ({rating, reviewCount}) => (
                 <li><RatingStar rating={rating}/></li>
                 <li id="rating"> {rating}</li>
                 <li>({reviewCount} Reviews)</li>
+                <li class="fa fa-angle-down" id="fa-arrow"></li>
                 <li>| 28 Answered Questions</li>
                 </ul>
         </div>

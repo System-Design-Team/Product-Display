@@ -54,12 +54,11 @@ div #title {
     font-weight:bold;
 }
 #review ul {
-    display:block;
+    display:flex;
     margin: auto;
     color:#0046BE;
     font-size: 13px;
     text-decoration: none;
-    line-height: normal;
     padding-inline-start: 0;
 }
 #review li {
@@ -75,4 +74,8 @@ div img {
     padding-top: 80px;
     width: 540px;
     height: 540px;
+}
+#fa-arrow {
+    font-size: 18px;
+    font-weight: bold;
 }
