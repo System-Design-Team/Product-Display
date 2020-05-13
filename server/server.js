@@ -29,8 +29,9 @@ app.get("/view", (req, res) => {
         if (err) {
             console.log('error getting product', err);
             res.status(500).send(err);
+        } else {
+            res.send(data);
         }
-        res.send(data);
     })
 });
 
