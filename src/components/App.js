@@ -9,7 +9,7 @@ export default class App extends Component {
     this.state = {
       message: "Hello World",
       doneFetching: false,
-      sku: 125617,
+      sku: 125613,
       productInfo: null,
       prod: "mask-parrot.gif"
     };
@@ -27,7 +27,7 @@ export default class App extends Component {
   // }
 
   getData() {
-    axios.get('http://localhost:9001/view', {
+    axios.get('http://eb-cli-test-3-dev.us-east-2.elasticbeanstalk.com/view', {
       params: {
         sku: this.state.sku
       }
