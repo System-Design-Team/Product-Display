@@ -1,6 +1,7 @@
 import React from 'react';
 import StarRating from 'react-star-ratings';
 
+//uses StarRating to generate dynamic stars for the product in state
 class RatingStar extends React.Component {
     constructor(props) {
         super(props);

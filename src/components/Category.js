@@ -1,5 +1,6 @@
 import React from 'react';
 
+//renders category from state product object
 const Category = ({catDetails}) => (
         <div id="category">
                 <ul>

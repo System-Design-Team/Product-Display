@@ -8,11 +8,14 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../dist")));
 
-
+//main endpoint for fetching product data
+    //must hit end point with object containing the sku
 app.get("/view", (req, res) => {
     // run your query here
     let sku = req.query.sku;
+    //sends sku to query function
     queries.getProduct(sku, (err, data) => {
+        //error handling
         if (err) {
             console.log('error getting product', err);
             res.status(500).send(err);

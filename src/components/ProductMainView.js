@@ -5,6 +5,7 @@ import Ratings from './Ratings.js';
 import Sku from './Sku.js';
 import Images from './Images.js';
 
+//renders children components with the product details from state
 const ProductMainView = ({details}) => (
         <div id="view-outer">
             <Category catDetails={details.category}/>

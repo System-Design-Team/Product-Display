@@ -18,12 +18,14 @@ export default class App extends Component {
     this.getData()
   }
 
+  //fetching product details function based off state saved sku
   getData() {
     axios.get('http://eb-cli-test-3-dev.us-east-2.elasticbeanstalk.com/view', {
       params: {
         sku: this.state.sku
       }
     })
+    //sets product details object in the state
     .then((productData) => {
       this.setState({
         productInfo: productData.data[0],
@@ -36,9 +38,9 @@ export default class App extends Component {
   }
 
   render() {
-    
     return (
       <div>
+      {/* if not able to fetch product details it will display a loading type message */}
         {this.state.doneFetching ? <ProductMainView details={this.state.productInfo}/> : 'Fetching product'}
       </div>
     );
