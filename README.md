@@ -2,9 +2,9 @@
 
 ## Using this Repository
 
--- npm install
--- npm run start will build a dist folder and watch for changes made
--- npm run start:server will launch a react server
+- *npm install*
+- *npm run dev* will build a dist folder and watch for changes made
+- *npm run start:server* will launch a react server
 
 ## Getting a Copy of the Repo
 
