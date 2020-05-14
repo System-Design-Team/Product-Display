@@ -4,27 +4,19 @@ import ProductMainView from './ProductMainView.js';
 let axios = require('axios');
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      message: "Hello World",
       doneFetching: false,
       sku: 125613,
-      productInfo: null,
-      prod: "mask-parrot.gif"
+      productInfo: null
     };
     this.getData = this.getData.bind(this);
-    // this.getAwsSignedUrl = this.getAwsSignedUrl.bind(this);
   }
 
   componentDidMount(){
     this.getData()
-    // this.getAwsSignedUrl(this.state.prod)
   }
-
-  // conponentWillUnmount() {
-  //   this.getData()
-  // }
 
   getData() {
     axios.get('http://eb-cli-test-3-dev.us-east-2.elasticbeanstalk.com/view', {
@@ -42,18 +34,7 @@ export default class App extends Component {
       console.log('error fetching data', err);
     })
   }
-  // getAwsSignedUrl(filename) {
-  //   console.log(filename);
-  //   axios.get(`http://localhost:9001/get_fileUrl/${filename}`)
-  //   .then(signedUrl => {
-  //     this.setState({
-  //       signedUrl:signedUrl.data
-  //     })
-  //   })
-  //   .catch(err => {
-  //     console.log('error fetching signedUrl', err);
-  //   })
-  // }
+
   render() {
     
     return (
