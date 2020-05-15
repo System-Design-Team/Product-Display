@@ -1,6 +1,7 @@
 import React from 'react';
 import RatingStar from './RatingStar.js';
 
+//renders image from state product details
 const Ratings = ({rating, reviewCount}) => (
         <div id="review">
                 <ul>
