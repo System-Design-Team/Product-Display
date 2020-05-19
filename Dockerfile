@@ -15,8 +15,8 @@ RUN npm install
 # Copies everything over to Docker environment
 COPY . .
 
-# Uses port which is used by the actual application
-EXPOSE 9001
 # Finally runs the application
 RUN npm run dev
-CMD [ "npm", "run", "start:server" ]
+# Uses port which is used by the actual application
+EXPOSE 9001
+CMD [ "node", "server/server.js" ]

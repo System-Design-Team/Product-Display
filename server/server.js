@@ -12,9 +12,9 @@ app.use(express.static(path.join(__dirname, "../dist")));
     //must hit end point with object containing the sku
 app.get("/view", (req, res) => {
     // run your query here
-    let sku = req.query.sku;
+    let name = req.query.name;
     //sends sku to query function
-    queries.getProduct(sku, (err, data) => {
+    queries.getProduct(name, (err, data) => {
         //error handling
         if (err) {
             console.log('error getting product', err);
@@ -25,6 +25,22 @@ app.get("/view", (req, res) => {
     })
 });
 
+// app.get("/view/name", (req, res) => {
+//     // run your query here
+//     let name = req.query.name;
+//     //sends name to query function
+//     queries.getProduct(name, (err, data) => {
+//         //error handling
+//         if (err) {
+//             console.log('error getting product', err);
+//             res.status(500).send(err);
+//         } else {
+//             res.send(data);
+//         }
+//     })
+// });
+
+// getProductByName
 app.listen(port, () => {
     console.log(`server is running and listening on port ${port}`);
 });
