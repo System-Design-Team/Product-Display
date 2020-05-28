@@ -12,7 +12,7 @@ CREATE TABLE products(
   ,review_rating        NUMERIC(3,1) NOT NULL
   ,review_count         INTEGER
   ,product_images       VARCHAR(255)
-  ,category             VARCHAR(100) NOT NULL
+  ,category             VARCHAR(101) NOT NULL
 );
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (510121,'Nintendo','Super Smashed Bros',1,100,'https://i.gadgets360cdn.com/large/super_smash_bros_ultimate_nintendo_switch_cover_1534157121839.jpg?output-quality=80&output-format=webp','media');
 INSERT INTO products(sku,brand,product_title,review_rating,review_count,product_images,category) VALUES (510122,'Nintendo','Montris',1,200,NULL,'media');
