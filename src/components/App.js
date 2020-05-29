@@ -45,7 +45,7 @@ export default class App extends Component {
     axios.get('/view', {
       //sends searchbar name as if it was part of URL
       params: {
-        name: "Dull Laptop"
+        name: "Sleek Cotton Salad"
       }
     })
     //sets product details object in the state

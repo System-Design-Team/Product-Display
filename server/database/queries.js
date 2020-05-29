@@ -1,26 +1,27 @@
-const mysql = require('mysql');
-const mysqlConfig = require('./mysqlconfig.js');
+const { Pool, Client } = require('pg')
+const myPostgressConfig = require('./myPostgressConfig.js');
 
-let connection = mysql.createConnection(mysqlConfig);
+const client = new Client(myPostgressConfig);
 
-connection.connect((err) => {
+client.connect((err) => {
     if (err) {
-        console.log('error connecting to database', err);
+        console.log('error connecting to postgress', err);
     }
-    console.log('connected to db');
+    console.log('connected to postgress');
 });
-//function for getting product object via sku
+//function for getting product object via name
 let getProduct = function(name, callback) {
-    connection.query('SELECT * FROM products WHERE product_title = ?',[name], (err, results) => {
+    client.query(`SELECT * FROM products WHERE product_title = '${name}'`, (err, results) => {
         //error checking from query
         if (err) {
             console.log('error querying db', err);
             callback(err, null);
         }
+        console.log("made it here!")
         callback(null, results);
     })
 }
-//function for getting product object via name
+//function for getting product object via sku
 // let getProductByName = function(name, callback) {
 //     connection.query('SELECT * FROM products WHERE sku = ?',[name], (err, results) => {
 //         //error checking from query
