@@ -45,14 +45,14 @@ export default class App extends Component {
     axios.get('/view', {
       //sends searchbar name as if it was part of URL
       params: {
-        name: "Sleek Cotton Salad"
+        name: 510128
       }
     })
     //sets product details object in the state
     .then((productData) => {
       console.log('hi from data fetch', productData);
       this.setState({
-        productInfo: productData.data[0],
+        productInfo: productData.data.rows[0],
         doneFetching: true
       });
     })

@@ -11,7 +11,7 @@ client.connect((err) => {
 });
 //function for getting product object via name
 let getProduct = function(name, callback) {
-    client.query(`SELECT * FROM products WHERE product_title = '${name}'`, (err, results) => {
+    client.query(`SELECT * FROM products WHERE sku = '${name}'`, (err, results) => {
         //error checking from query
         if (err) {
             console.log('error querying db', err);
